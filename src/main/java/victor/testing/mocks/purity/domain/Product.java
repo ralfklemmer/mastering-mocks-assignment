@@ -4,7 +4,9 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.time.LocalDateTime;
 
 @Entity
@@ -22,8 +24,8 @@ public class Product {
 
     private String barcode;
 
-
     private LocalDateTime createDate;
+
     public Product(String name, String barcode, ProductCategory category) {
         this.name = name;
         this.barcode = barcode;
@@ -35,6 +37,4 @@ public class Product {
     }
 
     public Product() {}
-
-
 }
